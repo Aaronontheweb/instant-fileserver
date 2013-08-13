@@ -4,7 +4,7 @@
   , "version": "0.1.0"
   , "dependencies"   : {
                         "argparse"        : "~0.1.15"
-                      },
+                      }
   , "author": "Aaron Stannard <aaron@aaronstannard.com>"
   , "homepage": "https://github.com/Aaronontheweb/node-slugs"
   , "main": "app.js"
