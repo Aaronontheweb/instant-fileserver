@@ -9,3 +9,13 @@ instant-server turns any directory into an instant file server, and it runs dire
 * __POST__ - append the contents of a file
 * __PUT__ - overwrite the contents of a file 
 * __DELETE__ - delete a file from the system
+
+## Installation
+
+````
+$ npm install instant-fileserver
+$ (instant-fileserver is added to your PATH; go anywhere on your system)
+$ instant-fileserver -help
+$ instant-fileserver
+... starting
+````

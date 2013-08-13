@@ -1,5 +1,5 @@
 {
-    "name": "instant-server"
+    "name": "instant-fileserver"
   , "description":"an instant file server that you can run anywhere from the command line"
   , "version": "0.1.0"
   , "dependencies"   : {
