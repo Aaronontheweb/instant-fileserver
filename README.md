@@ -11,7 +11,7 @@ instant file server (ifs) turns any directory into an instant file server, and i
 * __DELETE__ - delete a file from the system
 
 ## Installation
-instant-server can be installed via (Node Package Manager)[0]
+instant-server can be installed via [Node Package Manager][0]
 
 Best results when you install globally using the `-g` flag on NPM.
 
