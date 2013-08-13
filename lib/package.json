@@ -8,7 +8,12 @@
                         "wrench"		  : "1.5.1"
                       }
   , "author": "Aaron Stannard <aaron@aaronstannard.com>"
-  , "homepage": "https://github.com/Aaronontheweb/node-slugs"
-  , "main": "app.js"
+  ,"repository": {
+    "type": "git",
+    "url": "https://github.com/Aaronontheweb/instant-server.git"
+  }
+  , "license": "MIT"
+  , "homepage": "https://github.com/Aaronontheweb/instant-server"
+  , "bin": "./app.js"
   , "keywords": ["server", "instant", "files", "fileserver", "file server"]
 }
