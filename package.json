@@ -21,7 +21,7 @@
   , "license": "MIT"
   , "homepage": "https://github.com/Aaronontheweb/instant-server"
   , "bin": {
-  	"ifs":"./bin/ifs"
+  	"instant-server":"./bin/ifs"
   }
   , "main":"./lib/app.js"
   , "preferGlobal": "true"

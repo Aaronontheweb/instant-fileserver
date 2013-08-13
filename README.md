@@ -18,8 +18,8 @@ Best results when you install globally using the `-g` flag on NPM.
 ````
 $ npm install -g ifs
 $ (instant-server is added to your PATH; go anywhere on your system)
-$ ifs -help
-$ ifs [arguments...]
+$ instant-server -help
+$ instant-server [arguments...]
 ... starting
 ````
 
