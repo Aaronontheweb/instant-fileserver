@@ -1,7 +1,7 @@
 {
     "name": "ifs"
   , "description":"an instant file server that you can run anywhere from the command line"
-  , "version": "0.1.0"
+  , "version": "0.1.1"
   , "dependencies"   : {
                         "argparse"        : "~0.1.15",
                         "mmmagic"		  : "0.3.3",
@@ -19,5 +19,8 @@
   }
   , "main":"./lib/app.js"
   , "preferGlobal": "true"
+  , "engines": {
+    "node": ">= 0.6.15"
+  }
   , "keywords": ["server", "instant", "files", "fileserver", "file server", "ifs"]
 }
