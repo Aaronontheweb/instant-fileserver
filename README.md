@@ -13,8 +13,10 @@ instant file server (ifs) turns any directory into an instant file server, and i
 ## Installation
 instant-server can be installed via (Node Package Manager)[0]
 
+Best results when you install globally using the `-g` flag on NPM.
+
 ````
-$ npm install ifs
+$ npm install -g ifs
 $ (instant-server is added to your PATH; go anywhere on your system)
 $ ifs -help
 $ ifs [arguments...]
