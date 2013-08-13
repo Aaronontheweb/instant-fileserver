@@ -6,8 +6,8 @@ instant file server (ifs) turns any directory into an instant file server, and i
 ## HTTP Conventions
 
 * __GET__ - reads the contents a file from the specified path
-* __POST__ - append the contents of a file
-* __PUT__ - overwrite the contents of a file 
+* __POST__ - overwrite or create a file
+* __PUT__ - update the contents of a file (__not implemented__)
 * __DELETE__ - delete a file from the system
 
 ## Installation

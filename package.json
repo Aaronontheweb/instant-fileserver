@@ -1,16 +1,17 @@
 {
     "name": "ifs"
   , "description":"an instant file server that you can run anywhere from the command line"
-  , "version": "0.1.1"
+  , "version": "0.1.2"
   , "dependencies"   : {
-                        "argparse"        : "~0.1.15",
+                        "argparse"    : "~0.1.15",
                         "mmmagic"		  : "0.3.3",
-                        "wrench"		  : "1.5.1"
+                        "wrench"		  : "1.5.1",
+                        "formidable"  : "1.0.14"
                       }
   , "devDependencies": {
-       "mocha"          :"1.12.0",
-       "superagent"     :"0.15.4",
-       "should"         :"1.2.2"
+       "mocha"          : "1.12.0",
+       "superagent"     : "0.15.4",
+       "should"         : "1.2.2"
   }
   , "author": "Aaron Stannard <aaron@aaronstannard.com>"
   ,"repository": {
