@@ -3,7 +3,8 @@
   , "description":"an instant file server that you can run anywhere from the command line"
   , "version": "0.1.0"
   , "dependencies"   : {
-                        "argparse"        : "~0.1.15"
+                        "argparse"        : "~0.1.15",
+                        "mmmagic"		  : "0.3.3"
                       }
   , "author": "Aaron Stannard <aaron@aaronstannard.com>"
   , "homepage": "https://github.com/Aaronontheweb/node-slugs"
