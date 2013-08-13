@@ -1,0 +1,12 @@
+{
+    "name": "instant-server"
+  , "description":"an instant file server that you can run anywhere from the command line"
+  , "version": "0.1.0"
+  , "dependencies"   : {
+                        "argparse"        : "~0.1.15"
+                      },
+  , "author": "Aaron Stannard <aaron@aaronstannard.com>"
+  , "homepage": "https://github.com/Aaronontheweb/node-slugs"
+  , "main": "app.js"
+  , "keywords": ["server", "instant", "files", "fileserver", "file server"]
+}
