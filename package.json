@@ -1,7 +1,7 @@
 {
     "name": "ifs"
   , "description":"an instant file server that you can run anywhere from the command line"
-  , "version": "0.1.2"
+  , "version": "0.1.3"
   , "dependencies"   : {
                         "argparse"    : "~0.1.15",
                         "mmmagic"		  : "0.3.3",
