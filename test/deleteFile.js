@@ -9,7 +9,8 @@
 var assert = require('assert'),
 	should = require('should'),
 	fs = require('fs'),
-	path = require('path');
+	path = require('path'),
+	wrench = require('wrench');
 
 var FileSysAgent = require('../lib/filesys/fileSysAgent').FileSysAgent,
 	Logger = require('../lib/logging/consoleLogger.js').Logger;
@@ -31,6 +32,22 @@ var absoluteFilePath = path.join(absoluteDirPath, fileName);
 
 var relativeFilePath = path.join(directory, fileName);
 
+function initialize(){
+	//create our target files
+	fs.mkdirSync(absoluteDirPath);
+	fs.writeFileSync(absoluteFilePath, testFile);
+}
+
+function cleanup(){
+	if(fs.existsSync(absoluteFilePath)){
+		fs.unlinkSync(absoluteFilePath);
+	}
+
+	if(fs.existsSync(absoluteDirPath)){
+		wrench.rmdirSyncRecursive(absoluteDirPath, false);
+	}
+}
+
 /**
  * Tests
  */
@@ -40,11 +57,18 @@ describe('filesys agent', function(){
 	/**
  	 * Setup
  	 */
+ 	before(function(done){
+ 		try{
+			cleanup();			
+			return done();
+		} catch(err){
+			return done(err);
+		}
+ 	});
+
 	beforeEach(function(done){
 		try{
-			//create our target files
-			fs.mkdirSync(absoluteDirPath);
-			fs.writeFileSync(absoluteFilePath, testFile);
+			initialize();
 			return done();
 		} catch(err){
 			return done(err);
@@ -58,8 +82,7 @@ describe('filesys agent', function(){
 	afterEach(function(done){
 		try{
 			//remove our target files
-			fs.unlinkSync(absoluteFilePath);
-			fs.rmdirSync(absoluteDirPath);
+			cleanup();			
 			return done();
 		} catch(err){
 			return done(err);
@@ -81,7 +104,23 @@ describe('filesys agent', function(){
 
 		it('should return a 204 if the file does exist and has been deleted', function(done){
 			var req = {};
-			fsAgent.delete('/fakepath/fake.txt', req, function(err, data){
+			fsAgent.delete(relativeFilePath, req, function(err, data){
+				if(err){
+					return done(err);
+				} else{
+					data.code.should.equal(204);
+					data.contentType.should.equal("text/html");
+					fs.existsSync(absoluteFilePath).should.equal(false);
+					done();
+				}
+			});
+		});
+	});
+
+	describe('delete directory', function(){
+		it('should return a 404 when a directory does not exist', function(done){
+			var req = {};
+			fsAgent.delete('/fakepath', req, function(err, data){
 				if(err){
 					err.code.should.equal(404);
 					done();
@@ -90,9 +129,19 @@ describe('filesys agent', function(){
 				}
 			});
 		});
-	});
 
-	describe('delete directory', function(){
-
+		it('should return a 204 if the directory does exist and has been deleted', function(done){
+			var req = {};
+			fsAgent.delete(directory, req, function(err, data){
+				if(err){
+					return done(err);
+				} else{
+					data.code.should.equal(204);
+					data.contentType.should.equal("text/html");
+					fs.existsSync(absoluteDirPath).should.equal(false);
+					done();
+				}
+			});
+		});
 	});
 });
