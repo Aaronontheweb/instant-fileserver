@@ -26,6 +26,7 @@ var fsAgent = new FileSysAgent({
 var testFile = "helloworld";
 var fileName = "helloworld.txt";
 var directory = "magicFolder";
+var subDirectory = "miniMagic";
 
 var absoluteDirPath = path.join(process.cwd(), directory);
 var absoluteFilePath = path.join(absoluteDirPath, fileName);
@@ -132,6 +133,23 @@ describe('filesys agent', function(){
 
 		it('should return a 204 if the directory does exist and has been deleted', function(done){
 			var req = {};
+			fsAgent.delete(directory, req, function(err, data){
+				if(err){
+					return done(err);
+				} else{
+					data.code.should.equal(204);
+					data.contentType.should.equal("text/html");
+					fs.existsSync(absoluteDirPath).should.equal(false);
+					done();
+				}
+			});
+		});
+
+		it('should return a 204 if the directory does exist, HAS SUB-FOLDERS, and has been deleted', function(done){
+			var req = {};
+			var subDirPath = path.join(absoluteDirPath, subDirectory);
+			fs.mkdirSync(subDirPath);
+			fs.existsSync(subDirPath).should.equal(true);
 			fsAgent.delete(directory, req, function(err, data){
 				if(err){
 					return done(err);
