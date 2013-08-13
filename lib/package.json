@@ -1,5 +1,5 @@
 {
-    "name": "instant-fileserver"
+    "name": "ifs"
   , "description":"an instant file server that you can run anywhere from the command line"
   , "version": "0.1.0"
   , "dependencies"   : {
@@ -15,5 +15,5 @@
   , "license": "MIT"
   , "homepage": "https://github.com/Aaronontheweb/instant-server"
   , "bin": "./app.js"
-  , "keywords": ["server", "instant", "files", "fileserver", "file server"]
+  , "keywords": ["server", "instant", "files", "fileserver", "file server", "ifs"]
 }
