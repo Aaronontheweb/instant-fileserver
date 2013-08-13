@@ -4,7 +4,8 @@
   , "version": "0.1.0"
   , "dependencies"   : {
                         "argparse"        : "~0.1.15",
-                        "mmmagic"		  : "0.3.3"
+                        "mmmagic"		  : "0.3.3",
+                        "wrench"		  : "1.5.1"
                       }
   , "author": "Aaron Stannard <aaron@aaronstannard.com>"
   , "homepage": "https://github.com/Aaronontheweb/node-slugs"
