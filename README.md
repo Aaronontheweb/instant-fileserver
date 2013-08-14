@@ -36,4 +36,4 @@ And it'll start automatically.
 See more [ifs examples][1].
 
  [0]: http://npmjs.org/
- [1]: /tree/master/examples
+ [1]: https://github.com/Aaronontheweb/instant-fileserver/tree/master/examples
