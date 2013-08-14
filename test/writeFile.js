@@ -97,10 +97,8 @@ describe('filesys agent', function(){
 			var targetPath = path.join(directory, 'newFile.txt');
 			var finalPath = path.join(absoluteDirPath, 'newFile.txt');
 			var fileData = {
-				upload: {
 					name: fileName,
 					path: absoluteFilePath
-				}
 			};
 
 			fsAgent.write(targetPath, req, fileData, function(err, data){
@@ -118,10 +116,8 @@ describe('filesys agent', function(){
 			var targetPath = path.join('newDirectory', 'newFile.txt');
 			var finalPath = path.join(process.cwd(), 'newDirectory', 'newFile.txt');
 			var fileData = {
-				upload: {
 					name: fileName,
 					path: absoluteFilePath
-				}
 			};
 
 			fsAgent.write(targetPath, req, fileData, function(err, data){
@@ -141,10 +137,8 @@ describe('create file to path used in URL and filename in upload', function(){
 			var targetPath = directory;
 			var finalPath = path.join(absoluteDirPath, fileName);
 			var fileData = {
-				upload: {
 					name: fileName,
 					path: absoluteFilePath
-				}
 			};
 
 			fsAgent.write(targetPath, req, fileData, function(err, data){
@@ -162,10 +156,8 @@ describe('create file to path used in URL and filename in upload', function(){
 			var targetPath = 'newDirectory';
 			var finalPath = path.join(process.cwd(), 'newDirectory', fileName);
 			var fileData = {
-				upload: {
 					name: fileName,
 					path: absoluteFilePath
-				}
 			};
 
 			fsAgent.write(targetPath, req, fileData, function(err, data){
