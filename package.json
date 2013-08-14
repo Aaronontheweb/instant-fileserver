@@ -16,10 +16,10 @@
   , "author": "Aaron Stannard <aaron@aaronstannard.com>"
   ,"repository": {
                     "type": "git",
-                    "url": "https://github.com/Aaronontheweb/instant-server.git"
+                    "url": "https://github.com/Aaronontheweb/instant-fileserver.git"
                   }
   , "license": "MIT"
-  , "homepage": "https://github.com/Aaronontheweb/instant-server"
+  , "homepage": "https://github.com/Aaronontheweb/instant-fileserver"
   , "bin": 
           {
   	         "ifs":"./bin/ifs"
