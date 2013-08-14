@@ -23,4 +23,17 @@ $ instant-server [arguments...]
 ... starting
 ````
 
+## Usage
+
+Using ifs is easy - after installing it globally, run it anywhere on the commandline:
+
+````
+$: ifs [-port #] [-hostname <host>] [-d <directory>]
+````
+
+And it'll start automatically.
+
+See more [ifs examples][1].
+
  [0]: http://npmjs.org/
+ [1]: https://github.com/Aaronontheweb/instant-fileserver/tree/master/examples
